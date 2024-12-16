@@ -1,0 +1,292 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Where Next?</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo/logo.png' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- <?php
+        $insertconf = false;
+        if (isset($_POST['name'])){
+        $server="localhost";
+        $user="root";
+        $password="";
+        $dbname="travel";
+        
+        $con = mysqli_connect($server,$user,$password,$dbname);
+        
+        if(!$con){
+            die("Connection with database not happening due to". mysqli_connect_error());
+        }
+        $name =$_POST['name'];
+        $email =$_POST['email'];
+        $mobile =$_POST['mobile'];
+        $from =$_POST['from'];
+        $to =$_POST['to'];
+        $date =$_POST['date'];
+        $members =$_POST['members'];
+
+        $sql_query = "INSERT INTO `travel` (`Name`, `Mobile`, `email`, `From`, `To`, `Date`, `Members`) VALUES ('$name', '$email', '$mobile', '$from', '$to', '$date', '$members');";
+
+        if ($con->query($sql_query) ==true){
+            $insertconf=true;
+        }else{
+            echo "ERROR : $sql_query <br> $con->error";
+        }
+        $con->close();
+        }
+    ?> -->
+    <header>
+        <div class="header-area">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="{% url 'home' %}"><img src="{% static 'img/logo/logo.png' %}" width="150px" height="100px" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+                            <div class="menu-wrapper d-flex align-items-center justify-content-end">
+
+                                <div class="main-menu d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="{% url 'home' %}">Home</a></li>
+                                            <li><a href="{% url 'event' %}">Events</a></li>
+                                            <li><a href="{% url 'about' %}">About</a></li>
+                                            <li><a href="{% url 'events_details' %}">Details</a></li>
+                                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="slider-area">
+            <div class="single-slider slider-height2 slider-bg2 slider-bg6 slider-bg5 d-flex align-items-center ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero__caption hero__caption2 text-center">
+                                <h2>Contact</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="contact-section" id="contact-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-title">Book Your Destination</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="email" id="email" type="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="mobile" id="mobile" type="text" placeholder="Mobile Number" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="from" id="from" type="text" placeholder="From" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="to" id="to" type="text" placeholder="To" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="date" id="date" type="date" placeholder="Date" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="members" id="members" type="text" placeholder="Enter Members" required>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="form-group mt-3">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="fa fa-home"></i></span>
+                            <div class="media-body">
+                                <h3>Husnabad , Siddipet</h3>
+                                <p>Gandichowk</p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="fa fa-mobile"></i></span>
+                            <div class="media-body">
+                                <h3>+91 9182520644</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="fa fa-envelope-o"></i></span>
+                            <div class="media-body">
+                                <h3>prudviteja2002@gmail.com</h3>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+   
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-area footer-padding">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+              <div class="single-footer-caption mb-50">
+                <div class="single-footer-caption mb-30">
+
+                  <div class="footer-logo mb-35">
+                    <a href="{% url 'home' %}"><img src="{% static 'img/logo/logo.png' %}" width="150px" alt=""></a>
+                  </div>
+                  <div class="footer-tittle">
+                    <div class="footer-pera">
+                      <p>Land behold it created good saw after she'd Our set living. Signs midst dominion creepeth
+                        morning laboris nisi ufsit aliquip.</p>
+                    </div>
+
+                    <div class="footer-social">
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+              <div class="single-footer-caption mb-50">
+                <div class="footer-tittle">
+                  <h4>Navigation</h4>
+                  <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                      <li><a href="{% url 'event' %}">Events</a></li>
+                      <li><a href="{% url 'about' %}">About</a></li>
+                      <li><a href="{% url 'events_details' %}">Details</a></li>
+                      <li><a href="{% url 'contact' %}">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-xl-2 col-lg-2 col-md-8 col-sm-6">
+              <div class="single-footer-caption mb-50">
+                <div class="footer-tittle">
+                  <h4>Services</h4>
+                  <ul>
+                    <li><a href="#">Blackforest</a></li>
+                    <li><a href="#">Bodhubon</a></li>
+                    <li><a href="#">Rongdhonu</a></li>
+                    <li><a href="#">Meghrong</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div> -->
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-8">
+              <div class="single-footer-caption mb-50">
+                <div class="footer-tittle mb-20">
+                  <h4>Contact Us</h4>
+                  <p>Husnabad, Telangana, India</p>
+                  <p>+91 9182520644</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-area">
+        <div class="container">
+          <div class="footer-border">
+            <div class="row">
+              <div class="col-xl-12 ">
+                <div class="footer-copy-right text-center">
+                  <p>Copyright &copy;
+                    <script data-cfasync="false"
+                      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved by <a
+                      href="https://prudviteja.netlify.com" target="_blank" rel="nofollow noopener">Prudvi teja</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script src="{% static 'js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/slicknav.js' %}"></script>
+    <script src="{% static 'js/magnific-popup.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/slick.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

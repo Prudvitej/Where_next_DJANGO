@@ -1,0 +1,368 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Where Next?</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo/logo.png' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+  <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-area">
+      <div class="main-header header-sticky">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-xl-2 col-lg-2">
+              <div class="logo">
+                <a href="{% url 'home' %}">
+                  <img src="{% static 'img/logo/logo.png' %}" width="150px" height="100px" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-10 col-lg-10">
+              <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                <div class="main-menu d-none d-lg-block">
+                  <nav>
+                    <ul id="navigation">
+                      <li><a href="{% url 'home' %}">Home</a></li>
+                      <li><a href="{% url 'event' %}">Events</a></li>
+                      <li><a href="{% url 'about' %}">About</a></li>
+                      <li><a href="{% url 'events_details' %}">Details</a></li>
+                      <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="mobile_menu d-block d-lg-none"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="slider-area">
+      <div class="single-slider slider-height2 slider-bg2 d-flex align-items-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="hero__caption hero__caption2 text-center">
+                <h2>Some Events We Do</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="services-section section-padding">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-5">
+            <div class="section-tittle text-center mb-45">
+              <span>Check our best promotional tour</span>
+              <h2>Some more Events</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Event 1 -->
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="single-cat mb-30">
+              <div class="cat-img">
+                <img src="{% static 'img/gallery/ak.jpeg' %}" alt="">
+              </div>
+              <div class="cat-cap">
+                <div class="pricing d-flex justify-content-between">
+                  <h3>
+                    <a href="https://www.google.com/maps/place/Akshardham/@28.6147567,77.2750951,16z/data=!4m10!1m2!2m1!1sakshardham+!3m6!1s0x390ce35b9975b1fb:0x69a09f265ef3b22a!8m2!3d28.6126735!4d77.2772619!15sCgpha3NoYXJkaGFtWgwiCmFrc2hhcmRoYW2SAQxoaW5kdV90ZW1wbGWaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVUjVkbkJEUkZGUkVBReABAA!16zL20vMDkxbmYx?hl=en"> Akshardham </a>
+                  </h3>
+                  <span class="price">20,000/-</span>
+                </div>
+                <p><a href="https://www.google.com/maps/place/Delhi/@28.6437954,76.8130338,10z/data=!3m1!4b1!4m6!3m5!1s0x390cfd5b347eb62d:0x37205b715389640!8m2!3d28.7040592!4d77.1024902!16zL20vMDlmMDc?hl=en">Delhi</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="single-cat mb-30">
+              <div class="cat-img">
+                <img src="{% static 'img/gallery/varanasi.jpeg' %}" alt="">
+              </div>
+              <div class="cat-cap">
+                <div class="pricing d-flex justify-content-between">
+                  <h3>
+                    <a href="https://www.google.com/maps/place/Shri+Kashi+Vishwanath+Temple/@25.3258978,82.9437698,13z/data=!4m10!1m2!2m1!1svaranasi+temple!3m6!1s0x398e2e21ee940b17:0x48600e4fcdfb7b13!8m2!3d25.3108532!4d83.0106783!15sCg92YXJhbmFzaSB0ZW1wbGVaESIPdmFyYW5hc2kgdGVtcGxlkgEMaGluZHVfdGVtcGxlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJaT0RReVltZFJSUkFC4AEA!16zL20vMDZrYzU0?hl=en">Varanasi</a>
+                  </h3>
+                  <span class="price">32,000/-</span>
+                </div>
+                <p><a href="https://www.google.com/maps/place/Uttar+Pradesh/@27.0665756,76.3631993,6z/data=!3m1!4b1!4m6!3m5!1s0x39994e9f7b4a09d3:0xf6a5476d3617249d!8m2!3d27.5705886!4d80.0981869!16zL20vMDFocG5o?hl=en">Uttar Pradesh</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="single-cat mb-30">
+              <div class="cat-img">
+                <img src="{% static 'img/gallery/goa.jpeg' %}" alt="">
+              </div>
+              <div class="cat-cap">
+                <div class="pricing d-flex justify-content-between">
+                  <h3>
+                    <a href="https://www.google.com/maps/place/Goa+Beaches/@15.5412934,73.7528545,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfc1ff898a0d13:0x1735bbea7072cd75!8m2!3d15.5412934!4d73.7573392!16s%2Fg%2F11gy4r052q?hl=en">Goa</a>
+                  </h3>
+                  <span class="price">12,000/-</span>
+                </div>
+                <p><a href="https://www.google.com/maps/place/Goa/@15.2993,74.1248,10z/data=!3m1!4b1!4m6!3m5!1s0x3bbfc1ff898a0d13:0x1735bbea7072cd75!8m2!3d15.5412934!4d73.7573392!16zL20vMDJ0aW1u?hl=en">Goa</a></p>
+              </div>
+            </div>
+          </div>
+          <!-- Event-4 -->
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="single-cat mb-30">
+              <div class="cat-img">
+                <img src="{% static 'img/gallery/goa.jpeg' %}" alt="">
+              </div>
+              <div class="cat-cap">
+                <div class="pricing d-flex justify-content-between">
+                  <h3><a href="https://www.google.com/maps/place/Goa+Beaches/@15.5412934,73.7528545,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfc1ff898a0d13:0x1735bbea7072cd75!8m2!3d15.5412934!4d73.7573392!16s%2Fg%2F11gy4r052q?hl=en">Goa</a></h3>
+                  <span class="price">12,000/-</span>
+                </div>
+                <p><a href="https://www.google.com/maps/place/Goa/@15.3490286,73.4461835,9z/data=!3m1!4b1!4m6!3m5!1s0x3bbfba106336b741:0xeaf887ff62f34092!8m2!3d15.2993265!4d74.123996!16zL20vMDFjMW5t?hl=en">Goa</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event-5 -->
+
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="single-cat mb-30">
+              <div class="cat-img">
+                <img src="{% static 'img/gallery/lak.jpeg' %}" alt="">
+              </div>
+              <div class="cat-cap">
+                <div class="pricing d-flex justify-content-between">
+                  <h3><a href="https://www.google.com/maps/place/Laknavaram+Cheruvu/@18.1485,80.0030071,13z/data=!3m1!4b1!4m6!3m5!1s0x3a3375164120b7ab:0x9bc96a7ca0f462!8m2!3d18.1488657!4d80.0618743!16s%2Fg%2F11bwd2mh4r?hl=en">Laknavaram</a></h3>
+                  <span class="price">7,200/-</span>
+                </div>
+                <p><a href="https://www.google.com/maps/place/Telangana/@17.8635588,77.0343955,7z/data=!3m1!4b1!4m6!3m5!1s0x3a3350db9429ed43:0x63ef7ba741594059!8m2!3d18.1124372!4d79.0192997!16zL20vMDN4NW5m?hl=en">Telangana</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event-6 -->
+
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="single-cat mb-30">
+              <div class="cat-img">
+                <img src="{% static 'img/gallery/Wonder.jpeg' %}" alt="">
+              </div>
+              <div class="cat-cap">
+                <div class="pricing d-flex justify-content-between">
+                  <h3><a href="https://www.google.com/maps/place/Wonderla+Amusement+Park,+Hyderabad/@17.2172886,78.5206151,15.77z/data=!4m6!3m5!1s0x3bcba45c8a25c483:0xae598b1bf0ebc558!8m2!3d17.2172886!4d78.5285053!16s%2Fg%2F11by_l69g5?hl=en">Wonderla</a></h3>
+                  <span class="price">3,000/-</span>
+                </div>
+                <p><a href="https://www.google.com/maps/place/Telangana/@17.8635588,77.0343955,7z/data=!3m1!4b1!4m6!3m5!1s0x3a3350db9429ed43:0x63ef7ba741594059!8m2!3d18.1124372!4d79.0192997!16zL20vMDN4NW5m?hl=en">Telangana</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event-7 -->
+
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="single-cat mb-30">
+              <div class="cat-img">
+                <a href="events_details.html#hari"><p>Popular</p><img src="{% static 'img/gallery/hari.jpeg' %}" alt=""></a>
+              </div>
+              <div class="cat-cap">
+                <div class="pricing d-flex justify-content-between">
+                  <h3><a href="https://www.google.com/maps/place/Haridwar,+Uttarakhand/@29.9526313,78.0458851,12z/data=!3m1!4b1!4m6!3m5!1s0x3909470eb8ee57c9:0x4e449176a640f5f3!8m2!3d29.9456906!4d78.1642478!16zL20vMDFxNnJi?hl=en">Haridwar</a></h3>
+                  <span class="price">42,000/-</span>
+                </div>
+                <p><a href="https://www.google.com/maps/place/Uttarakhand/@30.0101465,74.6901124,7z/data=!3m1!4b1!4m6!3m5!1s0x3909dcc202279c09:0x7c43b63689cc005!8m2!3d30.066753!4d79.0192997!16zL20vMDUwdHQ4?hl=en">Uttarakhand</a></p>
+              </div>
+            </div>
+          </div>
+          
+
+
+
+
+
+
+        </div>
+      </div>
+    </section>
+    <div class="instagram-area fix">
+      <div class="container-fluid p-0">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="instagram-active owl-carousel">
+              <div class="single-instagram">
+                <img src="{% static 'img/gallery/instra1.jpg' %}" alt="">
+              </div>
+              <div class="single-instagram">
+                <img src="{% static 'img/gallery/instra2.jpg' %}" alt="">
+              </div>
+              <div class="single-instagram">
+                <img src="{% static 'img/gallery/instra3.jpg' %}" alt="">
+              </div>
+              <div class="single-instagram">
+                <img src="{% static 'img/gallery/instra4.jpg' %}" alt="">
+              </div>
+              <div class="single-instagram">
+                <img src="{% static 'img/gallery/instra5.jpg' %}" alt="">
+              </div>
+              <div class="single-instagram">
+                <img src="{% static 'img/gallery/instra4.jpg' %}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-area footer-padding">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+                <div class="single-footer-caption mb-50">
+                  <div class="single-footer-caption mb-30">
+    
+                    <div class="footer-logo mb-35">
+                      <a href="{% url 'home' %}"><img src="{% static 'img/logo/logo.png' %}" width="150px" alt=""></a>
+                    </div>
+                    <div class="footer-tittle">
+                      <div class="footer-pera">
+                        <p>Land behold it created good saw after she'd Our set living. Signs midst dominion creepeth
+                          morning laboris nisi ufsit aliquip.</p>
+                      </div>
+    
+                      <div class="footer-social">
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                <div class="single-footer-caption mb-50">
+                  <div class="footer-tittle">
+                    <h4>Navigation</h4>
+                    <ul>
+                      <li><a href="{% url 'home' %}">Home</a></li>
+                      <li><a href="{% url 'event' %}">Events</a></li>
+                      <li><a href="{% url 'about' %}">About</a></li>
+                      <li><a href="{% url 'events_details' %}">Details</a></li>
+                      <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-4 col-sm-8">
+                <div class="single-footer-caption mb-50">
+                  <div class="footer-tittle mb-20">
+                    <h4>Contact Us</h4>
+                    <p>Husnabad, Telangana, India</p>
+                    <p>+91 9182520644</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="footer-bottom-area">
+          <div class="container">
+            <div class="footer-border">
+              <div class="row">
+                <div class="col-xl-12 ">
+                  <div class="footer-copy-right text-center">
+                    <p>Copyright &copy;
+                      <script data-cfasync="false"
+                        src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                      <script>document.write(new Date().getFullYear());</script> All rights reserved by <a
+                        href="https://prudviteja.netlify.app" target="_blank" rel="nofollow noopener">Prudvi teja</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <div id="back-top">
+      <a title="Go to Top" href="#"> <i class="fa fa-level-up"></i></a>
+    </div>
+    
+    <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+    
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    
+    <script src="{% static 'js/contact.js' %}"></script>
+    <script src="{% static 'js/jquery.form.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/mail-script.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-23581568-13');
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+      integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+      data-cf-beacon='{"rayId":"7abc7a28da877960","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.2.0","si":100}'
+      crossorigin="anonymous"></script>
+    </body>
+    
+    </html>
+    
